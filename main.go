@@ -18,7 +18,9 @@ func main() {
 	log.Printf("Waiting for connection...")
 
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
-	defer cancel()
+	defer func() {
+		cancel()
+	}()
 	target := "localhost:4317"
 	serviceName := "test-service"
 	shutdownTelemetry, err := telemetry.Init(ctx, target, serviceName)
