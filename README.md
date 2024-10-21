@@ -1,3 +1,5 @@
+https://github.com/open-telemetry/opentelemetry-go-contrib/tree/main/examples/otel-collector
+
 # Prerequisites
 
 Ensure you have [Docker Compose V2](https://docs.docker.com/compose/) installed before proceeding with this demo.
