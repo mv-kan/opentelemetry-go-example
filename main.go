@@ -23,7 +23,8 @@ func main() {
 	}()
 	target := "localhost:4317"
 	serviceName := "test-service"
-	shutdownTelemetry, err := telemetry.Init(ctx, target, serviceName)
+	shutdownTelemetry, err := telemetry.Init(ctx, target, serviceName, time.Second)
+	// _, err := telemetry.Init(ctx, target, serviceName, time.Second)
 	if err != nil {
 		log.Fatal(err)
 	}
